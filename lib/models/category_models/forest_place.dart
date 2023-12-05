@@ -43,7 +43,7 @@ var forestPlaceList = [
     nilai: '4.2',
     openDays: 'Open Everyday',
     openTime: '24 Hours',
-    ticketPrice: '-',
+    ticketPrice: 'Rp -',
     imageAsset: 'assets/images/taman-kota.jpg',
     imageUrls: [
       'https://lh3.googleusercontent.com/p/AF1QipPkhxxPd2TUsRFapm57wByGh0TVxJzawmP1Tk5d=s1360-w1360-h1020',
@@ -56,7 +56,7 @@ var forestPlaceList = [
     name: 'Wahana Wisata Pokland',
     location: 'Haurwangi',
     description:
-        'Wana Wisata Pokland merupakan tempat wisata dengan suasana rindang dan memiliki sejumlah wahana permainan. Obyek wisata ini cocok untuk liburan bersama keluarga maupun teman.',
+        'Wahana Wisata Pokland merupakan tempat wisata dengan suasana rindang dan memiliki sejumlah wahana permainan. Obyek wisata ini cocok untuk liburan bersama keluarga maupun teman.',
     nilai: '3.9',
     openDays: 'Open EveryDay',
     openTime: '09:00 - 17:00',
@@ -87,85 +87,19 @@ var forestPlaceList = [
   ),
   ForestPlace(
     id: '4',
-    name: 'Wahana Wisata Pokland',
-    location: 'Haurwangi',
+    name: 'HUKOCI Hutan Kota Cianjur',
+    location: 'Babakankaret',
     description:
-        'Wana Wisata Pokland merupakan tempat wisata dengan suasana rindang dan memiliki sejumlah wahana permainan. Obyek wisata ini cocok untuk liburan bersama keluarga maupun teman.',
-    nilai: '3.9',
-    openDays: 'Open EveryDay',
-    openTime: '09:00 - 17:00',
-    ticketPrice: 'Rp 20000',
-    imageAsset: 'assets/images/pokland.jpg',
-    imageUrls: [
-      'https://lh3.googleusercontent.com/p/AF1QipPwdZc6mCcf_uy1NzzFkyfvmJ176j4XRiCE2lhs=s1360-w1360-h1020',
-      'https://lh3.googleusercontent.com/p/AF1QipP15nmkiqBm-FA3kl-t1jwoDMll5DtzaTmck7bZ=s1360-w1360-h1020',
-      'https://lh3.googleusercontent.com/p/AF1QipNy-jBabNEPb3NqzFniE3_-MY7hWQKaB-gm5MBn=s1360-w1360-h1020',
-    ],
-  ),
-  ForestPlace(
-    id: '5',
-    name: 'Taman Kota Bekas Terminal Bus',
-    location: 'Cianjur',
-    description: 'Taman Kota Cianjur, Cocok untuk jalan-jalan',
+        'Wisata taman hukoci yang ada di kota Cianjur menjadi salah satu destinasi wisata yang sampai sekarang banyak dikunjungi oleh wisatawan di mana Ketika anda berkunjung ke Taman hutan kota Cianjur tersebut, maka tetaplah menjaga kebersihan lingkungan supaya tetap Asri dan nyaman untuk pengunjung lain.',
     nilai: '4.2',
-    openDays: 'Open Everyday',
-    openTime: '24 Hours',
-    ticketPrice: '-',
-    imageAsset: 'assets/images/taman-kota.jpg',
-    imageUrls: [
-      'https://lh3.googleusercontent.com/p/AF1QipPkhxxPd2TUsRFapm57wByGh0TVxJzawmP1Tk5d=s1360-w1360-h1020',
-      'https://lh3.googleusercontent.com/p/AF1QipO16lykn283MzZcyAgWplzidYlgIDbvUqegaUS_=s1360-w1360-h1020',
-      'https://lh3.googleusercontent.com/p/AF1QipOTsK0BP13XhqJ-zov-uuuXUjo1zyWEAWeYKQNy=s1360-w1360-h1020'
-    ],
-  ),
-  ForestPlace(
-    id: '6',
-    name: 'Wahana Wisata Pokland',
-    location: 'Haurwangi',
-    description:
-        'Wana Wisata Pokland merupakan tempat wisata dengan suasana rindang dan memiliki sejumlah wahana permainan. Obyek wisata ini cocok untuk liburan bersama keluarga maupun teman.',
-    nilai: '3.9',
     openDays: 'Open EveryDay',
     openTime: '09:00 - 17:00',
-    ticketPrice: 'Rp 20000',
-    imageAsset: 'assets/images/pokland.jpg',
+    ticketPrice: 'Gratis',
+    imageAsset: 'assets/images/hukoci.jpeg',
     imageUrls: [
-      'https://lh3.googleusercontent.com/p/AF1QipPwdZc6mCcf_uy1NzzFkyfvmJ176j4XRiCE2lhs=s1360-w1360-h1020',
-      'https://lh3.googleusercontent.com/p/AF1QipP15nmkiqBm-FA3kl-t1jwoDMll5DtzaTmck7bZ=s1360-w1360-h1020',
-      'https://lh3.googleusercontent.com/p/AF1QipNy-jBabNEPb3NqzFniE3_-MY7hWQKaB-gm5MBn=s1360-w1360-h1020',
+      'https://lh5.googleusercontent.com/p/AF1QipNabKJf6Ti-sssh8csZoXFmBLCR_ELG33aAQTBJ=w141-h235-n-k-no-nu',
+      'https://lh5.googleusercontent.com/p/AF1QipMvJlZ9OODSiF3H7p4ybu9U5FLgJl30GcdeCzqL=w141-h101-n-k-no-nu',
+      'https://lh5.googleusercontent.com/p/AF1QipPP3hN2aokO9kwQjGNF6BXVlys6C4yGmmGbvZcA=w141-h141-n-k-no-nu'
     ],
-  ),
-  ForestPlace(
-    id: '7',
-    name: 'Taman Kota Bekas Terminal Bus',
-    location: 'Cianjur',
-    description: 'Taman Kota Cianjur, Cocok untuk jalan-jalan',
-    nilai: '4.2',
-    openDays: 'Open Everyday',
-    openTime: '24 Hours',
-    ticketPrice: '-',
-    imageAsset: 'assets/images/taman-kota.jpg',
-    imageUrls: [
-      'https://lh3.googleusercontent.com/p/AF1QipPkhxxPd2TUsRFapm57wByGh0TVxJzawmP1Tk5d=s1360-w1360-h1020',
-      'https://lh3.googleusercontent.com/p/AF1QipO16lykn283MzZcyAgWplzidYlgIDbvUqegaUS_=s1360-w1360-h1020',
-      'https://lh3.googleusercontent.com/p/AF1QipOTsK0BP13XhqJ-zov-uuuXUjo1zyWEAWeYKQNy=s1360-w1360-h1020'
-    ],
-  ),
-  ForestPlace(
-    id: '8',
-    name: 'Wahana Wisata Pokland',
-    location: 'Haurwangi',
-    description:
-        'Wana Wisata Pokland merupakan tempat wisata dengan suasana rindang dan memiliki sejumlah wahana permainan. Obyek wisata ini cocok untuk liburan bersama keluarga maupun teman.',
-    nilai: '3.9',
-    openDays: 'Open EveryDay',
-    openTime: '09:00 - 17:00',
-    ticketPrice: 'Rp 20000',
-    imageAsset: 'assets/images/pokland.jpg',
-    imageUrls: [
-      'https://lh3.googleusercontent.com/p/AF1QipPwdZc6mCcf_uy1NzzFkyfvmJ176j4XRiCE2lhs=s1360-w1360-h1020',
-      'https://lh3.googleusercontent.com/p/AF1QipP15nmkiqBm-FA3kl-t1jwoDMll5DtzaTmck7bZ=s1360-w1360-h1020',
-      'https://lh3.googleusercontent.com/p/AF1QipNy-jBabNEPb3NqzFniE3_-MY7hWQKaB-gm5MBn=s1360-w1360-h1020',
-    ],
-  ),
+  )
 ];
