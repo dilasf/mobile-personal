@@ -1,0 +1,177 @@
+import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+import 'package:wisata_app/models/category_models/popular_place.dart';
+import 'package:wisata_app/providers/favorite_provider.dart';
+import 'package:wisata_app/screens/categoryscreens/details_screen/detail_screen.dart';
+import 'package:wisata_app/utils/contants.dart';
+
+var informationTextStyle = const TextStyle(fontFamily: 'Inter');
+
+class PopularScreen extends StatefulWidget {
+  const PopularScreen({Key? key}) : super(key: key);
+
+  @override
+  _PopularScreenState createState() => _PopularScreenState();
+}
+
+class _PopularScreenState extends State<PopularScreen> {
+  late FavoriteProvider favoriteProvider;
+
+  @override
+  void initState() {
+    super.initState();
+    favoriteProvider = Provider.of<FavoriteProvider>(context, listen: false);
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text(
+          'Populer',
+          style: TextStyle(
+            fontSize: 15,
+            fontWeight: FontWeight.w500,
+            color: Colors.white,
+          ),
+        ),
+        backgroundColor: primaryColor,
+        leading: IconButton(
+          icon: Image.asset(
+            'assets/icons/back-icons.png',
+            width: 25,
+            height: 25,
+          ),
+          iconSize: 25,
+          onPressed: () {
+            Navigator.pop(context);
+          },
+        ),
+        titleSpacing: 0,
+      ),
+      body: Container(
+        color: secondaryColor,
+        child: GridView.builder(
+          padding: const EdgeInsets.only(left: 15),
+          gridDelegate: const SliverGridDelegateWithMaxCrossAxisExtent(
+            maxCrossAxisExtent: 200,
+            crossAxisSpacing: 5.0,
+            mainAxisSpacing: 10.0,
+          ),
+          itemBuilder: (context, index) {
+            final PopularPlace place = popularPlaceList[index];
+            final favoriteProvider = Provider.of<FavoriteProvider>(context);
+            return InkWell(
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) {
+                      return DetailScreen(place: place);
+                    },
+                  ),
+                );
+              },
+              child: Container(
+                width: 136,
+                height: 178,
+                child: Stack(
+                  children: [
+                    Positioned(
+                      left: 0,
+                      top: 0,
+                      child: Container(
+                        width: 136,
+                        height: 178,
+                        decoration: BoxDecoration(
+                          color: Colors.white,
+                          borderRadius: BorderRadius.circular(20),
+                        ),
+                      ),
+                    ),
+                    Positioned(
+                      left: 6,
+                      top: 5,
+                      child: Container(
+                        width: 125,
+                        height: 110,
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(20),
+                          image: DecorationImage(
+                            image: AssetImage(place.imageAsset),
+                            fit: BoxFit.cover,
+                            alignment: Alignment.center,
+                          ),
+                        ),
+                      ),
+                    ),
+                    Positioned(
+                      left: 8,
+                      top: 120,
+                      child: SizedBox(
+                        width: 77,
+                        height: 17,
+                        child: Text(
+                          place.name,
+                          style: const TextStyle(
+                            color: Colors.black,
+                            fontSize: 11,
+                            fontWeight: FontWeight.w500,
+                          ),
+                        ),
+                      ),
+                    ),
+                    Positioned(
+                      left: 10,
+                      top: 135,
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Row(
+                            children: [
+                              const Icon(
+                                Icons.location_on,
+                                size: 12,
+                                color: Color(0xFF77797C),
+                              ),
+                              const SizedBox(width: 4),
+                              Text(
+                                place.location,
+                                style: const TextStyle(
+                                  color: Color(0xFF77797C),
+                                  fontSize: 9,
+                                  fontWeight: FontWeight.w400,
+                                ),
+                              ),
+                            ],
+                          ),
+                          const SizedBox(width: 40),
+                          InkWell(
+                            onTap: () {
+                              setState(() {
+                                place.toggleFavorite();
+                                favoriteProvider.toggleFavorite(place);
+                              });
+                            },
+                            child: Icon(
+                              Icons.favorite,
+                              size: 15,
+                              color: favoriteProvider.isFavorite(place)
+                                  ? Colors.red
+                                  : Color(0xFF77797C),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            );
+          },
+          itemCount: popularPlaceList.length,
+        ),
+      ),
+    );
+  }
+}
